@@ -1,31 +1,33 @@
-
 /*
- /Users/tocoleman/src/www/users/tocoleman/extensions/bookmarklet/abacus_burger/styles.css
- //www/users/tocoleman/extensions/bookmarklet/abacus_burger/styles.css
 
-https://drive.google.com/file/d/0B9jGtQ6OVJ67MjZjejZIem80OU0/edit?usp=sharing
+https://drive.google.com/file/d/0B9jGtQ6OVJ67NTJGekl6MDFzNm8/edit?usp=sharing
 
- https:/ /googledrive.com/host/0B9jGtQ6OVJ67MjZjejZIem80OU0
+	wb.id = 'popup-burger-dialog';
 
-  wb.id = 'popup-burger-dialog';
-
-  wb.style.zIndex = 93331;
-  wb.style.background = 'white';
-  wb.style.color = 'blue';
+	wb.style.zIndex = 93331;
+	wb.style.background = 'white';
+	wb.style.color = 'blue';
 
         wb.style.border = '2px inset'
-  wb.style.borderColor = 'blue';
-  wb.style.borderWidth = '4px';
+	wb.style.borderColor = 'blue';
+	wb.style.borderWidth = '4px';
 
-  wb.style.position = 'fixed';
-  wb.style.top = '35px';
-  wb.style.right = '35px';
-  wb.style.width = '500px';
-  wb.style.height = '400px';
+	wb.style.position = 'fixed';
+	wb.style.top = '35px';
+	wb.style.right = '35px';
+	wb.style.width = '500px';
+	wb.style.height = '400px';
 
-  wb.style.display = 'none';
+	wb.style.display = 'none';
 
 */
+
+label, checkbox {
+    display: inline;
+}
+.dateValues{
+    width: 40px;
+}
 
 #burger-img {
     z-index: 93330;
@@ -42,7 +44,7 @@ https://drive.google.com/file/d/0B9jGtQ6OVJ67MjZjejZIem80OU0/edit?usp=sharing
     top: 35px;
     right: 35px;
     width: 600px;
-    height: 400px;  /* why must this be set in the javascript? */
+    height: 550px;  /* why must this be set in the javascript? */
     display: none;
 }
 
@@ -52,43 +54,136 @@ https://drive.google.com/file/d/0B9jGtQ6OVJ67MjZjejZIem80OU0/edit?usp=sharing
     height: 100%
 }
 
+#dialog-header{
+    float: left;
+    width: 100%;
+    height: 8%;
+    font-size: 25px;
+}
+
+#dialog-body{
+    float: left;
+    width: 100%;
+    height: 65%;
+}
+
+#hotel-choices{
+    float: left;
+    width: 40%;
+    /* todo: how to use percentages? */
+    /* something less than 240 */
+    width: 200px;
+    height: 100%;
+}
+#input-controls{
+    float: left;
+    width: 60%;
+    height: 100%;
+    border-left: ridge;
+}
+
+#core-inputs{
+    float: left;
+    width: 100%;
+    height: 10%;
+}
+#env-inputs{
+    float: left;
+    width: 100%;
+    height: 23%;
+}
+#pos-inputs{
+    float: left;
+    width: 100%;
+    height: 71%;
+}
+
+#dialog-footer{
+    float: left;
+    width: 100%;
+    height: 23%;
+}
+
+.hotelChoice{
+    color: white;
+}
+.hotelChoice:hover{
+    cursor: pointer;
+    color: yellow;
+}
+
+.environmentColumn{
+    /*		padding: 5px; */
+    padding-left: 5px;
+    float: left;
+    width: 30%
+}
+.environmentRadio{
+    /*  		display:block;  */
+}
+
+.locRow{
+    width: 95%;  /* leave some off for border? */
+    height: 15%;
+}
+.locChoice{
+    border-width: 5px;
+    /*  		padding: 3px;  */
+    border-style: solid;
+    background: blue;
+    border-radius: 15px;
+    border-color: black;
+    border-style: solid;
+    float:left;
+    width: 15%;
+    height: 90%;
+    text-align: center;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.locChoice:hover{
+    border-color: white;
+    cursor:pointer;
+}
+
+.clickMe{
+    display: inline;
+    margin: 0px;
+    margin-left: 5px;
+}
+.clickMe:hover{
+    cursor: pointer;
+}
+
 /*
-  icon.style.opacity='0.3';
-  icon.style.position = 'fixed';
-  icon.style.zIndex = '93330';
-  icon.style.top = '10px';
-  icon.style.right = '10px';
+	icon.style.opacity='0.3';
+	icon.style.position = 'fixed';
+	icon.style.zIndex = '93330';
+	icon.style.top = '10px';
+	icon.style.right = '10px';
 
-  icon.onmouseleave = function(e){
-    e.target.style.zoom = '100%';
-    e.target.style.opacity='0.3'
-    e.target.style.top = '10px';
-    e.target.style.right = '10px';
-    };
-  icon.onmouseover = function(e){
-    e.target.style.zoom = '250%';
-    e.target.style.opacity='0.9'
-    e.target.style.top = '-2px';
-    e.target.style.right = '-2px';
-    };
-
+	icon.onmouseleave = function(e){ 
+		e.target.style.zoom = '100%';
+		e.target.style.opacity='0.3' 
+		e.target.style.top = '10px';
+		e.target.style.right = '10px';
+		};
+	icon.onmouseover = function(e){ 
+		e.target.style.zoom = '250%';
+		e.target.style.opacity='0.9' 
+		e.target.style.top = '-2px';
+		e.target.style.right = '-2px';
+		};
+		
 -moz-transform:  scale(0.5,0.5);
-
+	
 */
 #burger-img       {opacity: 0.3; position: fixed; zIndex: 93330; top: 10px; right: 10px}
-
-/*
-if( window.navigator.userAgent.search(/chrome/i) < 0 &&
-    window.navigator.userAgent.search(/firefox/i) < 0 ){
-
-    // positioning of the icon in IE cannot be done here.
-    #burger-img:hover {opacity: 0.9; cursor: pointer; top: 10px; right: 170px }
-{
-*/
+#burger-img:hover {opacity: 0.9; cursor: pointer }
 /*
 // zoom : IE, MOZ: firefox, webkit: chrome
 if( window.navigator.userAgent.search(/chrome/i) > -1 ){
-  // opera
+	// opera
 //  #burger-img:hover { webkit-transform: scale(2); -webkit-transform-origin: right top }"
   #burger-img:hover { transform: scale(2); transform-origin: 35px 10px }"
   #burger-img:hover { -moz-transform: scale(2.5); -moz-transform-origin: right top; }"
@@ -112,11 +207,11 @@ else {
 
 .expBucket, .topRowButtons { text-align: center; vertical-align: center; }
 /*
-    nb.style.position = 'relative';
-    nb.style.float = 'right';
-    nb.style.height = '25px';
-    nb.style.width = '50px';
-    nb.style.marginRight = '3px';
+		nb.style.position = 'relative';
+		nb.style.float = 'right';
+		nb.style.height = '25px';
+		nb.style.width = '50px';
+		nb.style.marginRight = '3px';
 */
 /* display: flex   gets the buttons to grow with text length. */
 .topRowButtons { position: relative; float: right; height: 25px; display: flex; margin-right: 3px }
@@ -152,8 +247,6 @@ else {
 
 /* todo: why is this not hitting? */
 .expBucketCookieSet { border-style: dashed; background: lightgreen }
-
-.unrand_set { background: red }
 
 /*
 // to expand the parent when children appear
