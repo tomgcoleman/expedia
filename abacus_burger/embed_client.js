@@ -1192,7 +1192,8 @@ function inject_page_elements() {
 
         cssPart.setAttribute("rel", "stylesheet");
         cssPart.setAttribute("type", "text/css");
-        cssPart.setAttribute("href", 'https://googledrive.com/host/0B9jGtQ6OVJ67MjZjejZIem80OU0');
+        //cssPart.setAttribute("href", 'https://googledrive.com/host/0B9jGtQ6OVJ67MjZjejZIem80OU0');
+        cssPart.setAttribute("href", 'https://rawgit.com/tomgcoleman/expedia/master/abacus_burger/styles.css');
         document.getElementsByTagName("head")[0].appendChild(cssPart);
 
         var script  = document.createElement('script');
