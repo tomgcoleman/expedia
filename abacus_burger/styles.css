@@ -1,0 +1,184 @@
+
+/*
+ /Users/tocoleman/src/www/users/tocoleman/extensions/bookmarklet/abacus_burger/styles.css
+ //www/users/tocoleman/extensions/bookmarklet/abacus_burger/styles.css
+
+https://drive.google.com/file/d/0B9jGtQ6OVJ67MjZjejZIem80OU0/edit?usp=sharing
+
+ https:/ /googledrive.com/host/0B9jGtQ6OVJ67MjZjejZIem80OU0
+
+  wb.id = 'popup-burger-dialog';
+
+  wb.style.zIndex = 93331;
+  wb.style.background = 'white';
+  wb.style.color = 'blue';
+
+        wb.style.border = '2px inset'
+  wb.style.borderColor = 'blue';
+  wb.style.borderWidth = '4px';
+
+  wb.style.position = 'fixed';
+  wb.style.top = '35px';
+  wb.style.right = '35px';
+  wb.style.width = '500px';
+  wb.style.height = '400px';
+
+  wb.style.display = 'none';
+
+*/
+
+#burger-img {
+    z-index: 93330;
+}
+
+#popup-burger-dialog {
+    z-index: 93331;
+    background-color: white;
+    color: blue;
+    border: 2px inset;
+    border-color: blue;
+    border-width: 4px;
+    position: fixed;
+    top: 35px;
+    right: 35px;
+    width: 600px;
+    height: 400px;  /* why must this be set in the javascript? */
+    display: none;
+}
+
+#parent-scroll-container{
+    float: left;
+    width: 100%;
+    height: 100%
+}
+
+/*
+  icon.style.opacity='0.3';
+  icon.style.position = 'fixed';
+  icon.style.zIndex = '93330';
+  icon.style.top = '10px';
+  icon.style.right = '10px';
+
+  icon.onmouseleave = function(e){
+    e.target.style.zoom = '100%';
+    e.target.style.opacity='0.3'
+    e.target.style.top = '10px';
+    e.target.style.right = '10px';
+    };
+  icon.onmouseover = function(e){
+    e.target.style.zoom = '250%';
+    e.target.style.opacity='0.9'
+    e.target.style.top = '-2px';
+    e.target.style.right = '-2px';
+    };
+
+-moz-transform:  scale(0.5,0.5);
+
+*/
+#burger-img       {opacity: 0.3; position: fixed; zIndex: 93330; top: 10px; right: 10px}
+
+/*
+if( window.navigator.userAgent.search(/chrome/i) < 0 &&
+    window.navigator.userAgent.search(/firefox/i) < 0 ){
+
+    // positioning of the icon in IE cannot be done here.
+    #burger-img:hover {opacity: 0.9; cursor: pointer; top: 10px; right: 170px }
+{
+*/
+/*
+// zoom : IE, MOZ: firefox, webkit: chrome
+if( window.navigator.userAgent.search(/chrome/i) > -1 ){
+  // opera
+//  #burger-img:hover { webkit-transform: scale(2); -webkit-transform-origin: right top }"
+  #burger-img:hover { transform: scale(2); transform-origin: 35px 10px }"
+  #burger-img:hover { -moz-transform: scale(2.5); -moz-transform-origin: right top; }"
+}
+else if( window.navigator.userAgent.search(/firefox/i) > -1 ){
+  #burger-img:hover { -moz-transform: scale(2.5); -moz-transform-origin: 38px 8px; }"
+}
+else {
+  // IE
+  #burger-img:hover { zoom: 250%; top: -2px; right: -2px }"
+}
+*/
+.pageName:hover, .expBucket:hover, .expName:hover { cursor: pointer }
+.expBucket:hover { border-color: #000; }
+
+.pageName, .expName { border-width: 3px; }
+.expName { margin-left: 8px; }
+
+
+.exp_header {width: 90%; height 35px}
+
+.expBucket, .topRowButtons { text-align: center; vertical-align: center; }
+/*
+    nb.style.position = 'relative';
+    nb.style.float = 'right';
+    nb.style.height = '25px';
+    nb.style.width = '50px';
+    nb.style.marginRight = '3px';
+*/
+/* display: flex   gets the buttons to grow with text length. */
+.topRowButtons { position: relative; float: right; height: 25px; display: flex; margin-right: 3px }
+
+.editBoxCookieTop { float: right; }
+
+.expBucket { margin: -6px; margin-left: -12px; position-y: 2px; }
+/* .expBucket { border-radius: 20px; border-style: solid; border-width: 3px; border-color: #FFFFFF; }
+*/
+/*  set to same height as container */
+
+.expContainer { line-height: 25px; margin-left: 24px; width: 90% }
+.expContainer { margin-bottom: 3px }
+
+/*
+ .expName { position: relative; float: left; marginLeft: 10px; }
+*/
+/*
+// float left
+// width: 100%
+// display: none  <<< cannot apply here, as it never shows, unless we say display: block
+*/
+.expCollapse { width: 90%; display: none }
+
+.expLink { color: grey; margin-left: 4px }
+
+/* line-height */
+
+/*
+ .expName, .expBucket, .expLinkRow, .expLink, .expVariationRow, .variation_button { line-height: 25px; }
+*/
+.pageName { height: 30px; font-size: x-large; }
+
+/* todo: why is this not hitting? */
+.expBucketCookieSet { border-style: dashed; background: lightgreen }
+
+.unrand_set { background: red }
+
+/*
+// to expand the parent when children appear
+// this helps to keep other elements to flow into gaps left after buttons
+*/
+.expVariationRow { display: inline-block }
+
+/* todo: why does this one only stick when up here? */
+.variation_button_cookie_set { background: lightgreen }
+
+
+.variation_button { background: lightblue; padding-left: 6px; padding-right: 6px }
+.variation_button { border-color: blue; border-style: solid }
+.variation_button { border-width: 3px }
+.variation_button { border-radius: 12px }
+.variation_button { margin-right: 4px; margin-bottom: 2px }
+.variation_button { height: 30px; line-height: 29px; float: left }
+.variation_button:hover { border-color: #00ff00 ; 3px; border-radius: 12px; cursor: pointer }
+
+.variation_button_active_abacus_set { border-style: dashed; }
+
+/* padding reduction to compensate for bold font increase in width */
+.variation_button_cookie_set { background: lightgreen; font-style:italic; font-weight: bold; padding-left: 4px; padding-right: 4px }
+
+
+.pageName:hover, .expBucket:hover, .expName:hover { cursor: pointer }
+
+.expBucket { border-radius: 20px; border-style: solid; border-width: 3px; border-color: #FFFFFF; }
