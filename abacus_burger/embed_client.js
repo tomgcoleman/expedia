@@ -525,9 +525,15 @@ function get_abov_cookie(){
     return abov_current_value;
 }
 
-function set_abov_cookie( new_value ){
+function set_abov_cookie( new_value) {
+    set_cookie('abov', new_value);
+}
+
+function set_cookie( c_name, new_value ){
 
     new_value = new_value.replace(/::/g, ':');
+
+    var cookie_name = c_name || 'abov';
 
     var cookie_change_request = 'abov=' + new_value + '; expires=Fri Dec 16 2022 00:00:00 UTC; path=/; ';
 
