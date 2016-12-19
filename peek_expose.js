@@ -38,12 +38,12 @@ var registered_for_callback = false;
 var extension_ids_to_notify = [];
 function ping_for_changes() {
     if (!socket) return;
-    if (socket.acks.connected && !registered_for_callback) {
+    if (socket.connected && !registered_for_callback) {
         console.log('register for user interaction match callback');
         socket.on('userInteractionMatch', onUserInteractionMatch);
         registered_for_callback = true;
     }
-    if (!socket.acks.connected && registered_for_callback) {
+    if (!socket.connected && registered_for_callback) {
         console.log('un register for user interaction match callback');
         registered_for_callback = false;
     }
