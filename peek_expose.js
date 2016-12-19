@@ -25,7 +25,7 @@ function callback_from_extension(data) {
 var message_index = 0;
 
 function onUserInteractionMatch(data) {
-    console.log('data received from expedia peek tool');
+    //console.log('data received from expedia peek tool');
     for (var i = 0 ; i < extension_ids_to_notify.length ; i++) {
         var extension_id = extension_ids_to_notify[i];
         var data_for_extension = {
@@ -38,24 +38,25 @@ function onUserInteractionMatch(data) {
     }
 }
 
+var log_prefix = 'peek_expose: ';
 var registered_for_callback = false;
 var extension_ids_to_notify = [];
 function ping_for_changes() {
     if (!socket) return;
     if (socket.connected && !registered_for_callback) {
-        console.log('register for user interaction match callback');
+        console.log(log_prefix + 'register for user interaction match callback');
         socket.on('userInteractionMatch', onUserInteractionMatch);
         registered_for_callback = true;
     }
     if (!socket.connected && registered_for_callback) {
-        console.log('un register for user interaction match callback');
+        console.log(log_prefix + 'un register for user interaction match callback');
         registered_for_callback = false;
     }
     var extension_ids_elements = document.getElementsByClassName('extension_ids');
     for (var i = 0 ; i < extension_ids_elements.length ; i++) {
         var id = extension_ids_elements[i].id;
         if (extension_ids_to_notify.indexOf(id) < 0) {
-            console.log('adding new extension id: ' + id);
+            console.log(log_prefix + 'adding new extension id: ' + id);
             extension_ids_to_notify.push(id);
         }
     }
@@ -63,9 +64,10 @@ function ping_for_changes() {
 
 setInterval( ping_for_changes, 1000);
 
-function get_peek_socket() {
-    return socket;
-}
-
-window.get_peek_socket = get_peek_socket;
+// nope: making it global does not expose it to the content script.
+//function get_peek_socket() {
+//    return socket;
+//}
+//
+//window.get_peek_socket = get_peek_socket;
 
