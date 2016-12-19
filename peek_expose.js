@@ -65,4 +65,3 @@ function get_peek_socket() {
 
 window.get_peek_socket = get_peek_socket;
 
-chrome.runtime.sendMessage(extension_id, data_for_extension, injectJson_callback_from_extension);
