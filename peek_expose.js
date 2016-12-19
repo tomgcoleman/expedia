@@ -22,11 +22,15 @@ function callback_from_extension(data) {
 
 }
 
+var message_index = 0;
+
 function onUserInteractionMatch(data) {
     console.log('data received from expedia peek tool');
     for (var i = 0 ; i < extension_ids_to_notify.length ; i++) {
         var extension_id = extension_ids_to_notify[i];
         var data_for_extension = {
+            command: 'peek_data_content',
+            message_index: message_index++,
             peek_data: data
         };
 
