@@ -57,7 +57,7 @@ function ping_for_changes() {
     }
 }
 
-setTimeout( ping_for_changes, 1000);
+setInterval( ping_for_changes, 1000);
 
 function get_peek_socket() {
     return socket;
