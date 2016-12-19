@@ -38,6 +38,19 @@ function onUserInteractionMatch(data) {
     }
 }
 
+function onConnectionChange(connected) {
+    for (var i = 0 ; i < extension_ids_to_notify.length ; i++) {
+        var extension_id = extension_ids_to_notify[i];
+        var data_for_extension = {
+            command: 'peek_data_connection_change',
+            message_index: message_index++,
+            connected: connected
+        };
+
+        chrome.runtime.sendMessage(extension_id, data_for_extension, callback_from_extension);
+    }
+}
+
 var log_prefix = 'peek_expose: ';
 var registered_for_callback = false;
 var extension_ids_to_notify = [];
@@ -47,10 +60,12 @@ function ping_for_changes() {
         console.log(log_prefix + 'register for user interaction match callback');
         socket.on('userInteractionMatch', onUserInteractionMatch);
         registered_for_callback = true;
+        onConnectionChange(true);
     }
     if (!socket.connected && registered_for_callback) {
         console.log(log_prefix + 'un register for user interaction match callback');
         registered_for_callback = false;
+        onConnectionChange(false);
     }
     var extension_ids_elements = document.getElementsByClassName('extension_ids');
     for (var i = 0 ; i < extension_ids_elements.length ; i++) {
