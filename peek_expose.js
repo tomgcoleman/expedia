@@ -61,6 +61,9 @@ function ping_for_changes() {
         socket.on('userInteractionMatch', onUserInteractionMatch);
         registered_for_callback = true;
         onConnectionChange(true);
+        setTimeout(function(){
+            onConnectionChange(true);
+        }, 2000);
     }
     if (!socket.connected && registered_for_callback) {
         console.log(log_prefix + 'un register for user interaction match callback');
