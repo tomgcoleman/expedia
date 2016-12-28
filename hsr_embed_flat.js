@@ -237,7 +237,8 @@ function injectJson_setup_connection_with_extension() {
                 require(requested_data_item.require_name, function (m) {
                     object_to_parse = m;
                 });
-            } else if (!object_to_parse.hasOwnProperty(obj_name_construction[0])) {
+            //} else if (!object_to_parse.hasOwnProperty(obj_name_construction[0])) {
+            } else if (!object_to_parse.hasOwnProperty(obj_name)) {
                 require(obj_name_construction[0], function (m) {
                     // todo: do this in a way that does not pollute the global namespace.
                     object_to_parse[obj_name_construction[0]] = m;
@@ -250,7 +251,7 @@ function injectJson_setup_connection_with_extension() {
                 }
                 if (!object_to_parse.hasOwnProperty(obj_name_construction[i])) {
                     console_error('cannot retrieve choices of data for ' + obj_name);
-                    return;
+                    continue; // keep trying
                 }
                 object_to_parse = object_to_parse[obj_name_construction[i]];
             }
