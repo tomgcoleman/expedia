@@ -136,20 +136,44 @@ function injectJson_callback_from_extension(data) {
             }
         }
 
-        if (data.require_name) {
-            require(data.require_name, function (required_module) {
-                console_log('inject json debug *** inside of require ' + data.require_name);
-                var module_method = required_module[data.method_to_call];
-                console_log('inject json debug *** inside of require method call ' + data.method_to_call);
-                // use "call" to specify the "this" parameter within the method being called.
-                module_method.call(required_module, objToModify);
-                console_log('inject json debug *** done with require ' + data.require_name);
-            });
+        // secret require name to make multiple calls.
+        // default to this if the require name is presenter
+        //if (data.require_name && data.require_name == '_populate_present_') {
+        if (data.require_name && data.require_name == 'presenter' && !data.only_presenter) {
+            // code copied from ajax response for HSR
+
+            require(['presenter', 'modelPopulator', 'modelPopulatorAdditional'],
+                function (presenter, modelPopulator, modelPopulatorAdditional) {
+                    // model data was set previously as the injected json
+                    // window.pageModel = data;
+                    // prod code pulls hash from url, json injector must set this manually.
+                    // window.pageModel.request = utils.queryToObject(utils.getHash());
+
+                    modelPopulator.populate(window.pageModel);
+                    modelPopulatorAdditional.populate(window.pageModel);
+
+                    presenter.render(window.pageModel);
+
+                    //if (data && data.metaData && data.metaData.isRetryRequest) {
+                    //    formController.updateHashFromForm('#searchForm');
+                    //}
+                });
         } else {
-            console_log('inject json debug *** inside of global function call ' + data.method_to_call);
-            var global_method = find_function_from_text(data.method_to_call);
-            global_method(objToModify);
-            console_log('inject json debug *** done with global function call ' + data.method_to_call);
+            if (data.require_name) {
+                require(data.require_name, function (required_module) {
+                    console_log('inject json debug *** inside of require ' + data.require_name);
+                    var module_method = required_module[data.method_to_call];
+                    console_log('inject json debug *** inside of require method call ' + data.method_to_call);
+                    // use "call" to specify the "this" parameter within the method being called.
+                    module_method.call(required_module, objToModify);
+                    console_log('inject json debug *** done with require ' + data.require_name);
+                });
+            } else {
+                console_log('inject json debug *** inside of global function call ' + data.method_to_call);
+                var global_method = find_function_from_text(data.method_to_call);
+                global_method(objToModify);
+                console_log('inject json debug *** done with global function call ' + data.method_to_call);
+            }
         }
     }
 
@@ -267,44 +291,60 @@ function injectJson_setup_connection_with_extension() {
             /* debugger; */
             var obj_name = requested_data_item.obj_name;
             var value_name = requested_data_item.pull_json;
+            if (value_name == 'results' && !requested_data_item.only_results) {
+                value_name = '*';
+            }
+            var pull_all_values = false;
+            if (value_name == '*') {
+                pull_all_values = true;
+            }
             var original_request = requested_data_item;
             var object_to_return = window;
             var result_builder = {};
             var requested_json = result_builder;
-            if (obj_name) {
+            if (obj_name && !pull_all_values) {
                 // if the object is not found, try requiring it.
                 if (object_to_return.hasOwnProperty(obj_name)) {
                     object_to_return = object_to_return[obj_name];
                 } else {
-                    require(obj_name, function (m) {
-                        object_to_return = m;
-                    });
+                    console.error('failed to find ' + obj_name);
                 }
             }
-            var obj_name_construction = value_name.split('.');
-            // if the first item is not found, try requiring it.
-            if (!object_to_return.hasOwnProperty(obj_name_construction[0])) {
-                // todo: do this in a better way.
-                require(obj_name_construction[0], function (m) {
-                    object_to_return[obj_name_construction[0]] = m;
-                });
-            }
-            for (var i = 0; i < obj_name_construction.length; i++) {
-                // flights page has item "model" but it returns false for "hasOwnProperty"
-                // todo: how else can we check for it?
-                if (!object_to_return.hasOwnProperty(obj_name_construction[i]) && !object_to_return[obj_name_construction[i]]) {
-                    console_error('failed to find sub item: ' + obj_name_construction[i]);
-                    return;
-                }
-                object_to_return = object_to_return[obj_name_construction[i]];
 
-                if (i === obj_name_construction.length - 1) {
-                    // copy in the value.
-                    result_builder[obj_name_construction[i]] = object_to_return;
-                } else {
-                    // construct the return value data structure
-                    result_builder[obj_name_construction[i]] = {};
-                    result_builder = result_builder[obj_name_construction[i]];
+            // outer loop is comma delimited items to extract
+            var parent_obj_source = object_to_return;
+            var parent_obj_target = result_builder;
+            var val_name_list = [];
+            if (pull_all_values) {
+                for (var key_name_in_source in parent_obj_source) {
+                    val_name_list.push(key_name_in_source);
+                }
+            } else {
+                val_name_list = value_name.split(/[,\s]+/);
+            }
+            for (var val_i = 0 ; val_i < val_name_list.length ; val_i++) {
+
+                // inner loop is nested values
+                obj_name_construction = val_name_list[val_i].split('.');
+                var source_walker = parent_obj_source;
+                var target_builder = parent_obj_target;
+                for (var i = 0; i < obj_name_construction.length; i++) {
+                    // flights page has item "model" but it returns false for "hasOwnProperty"
+                    // todo: how else can we check for it?
+                    if (!source_walker.hasOwnProperty(obj_name_construction[i]) && !source_walker[obj_name_construction[i]]) {
+                        console_error('failed to find sub item: ' + obj_name_construction[i]);
+                        continue;
+                    }
+                    if (i === obj_name_construction.length - 1) {
+                        // copy in the value.
+                        target_builder[obj_name_construction[i]] = source_walker[obj_name_construction[i]];
+                    } else {
+                        // go deeper into the source value
+                        source_walker = source_walker[obj_name_construction[i]];
+                        // construct the return value data structure
+                        target_builder[obj_name_construction[i]] = {};
+                        target_builder = target_builder[obj_name_construction[i]];
+                    }
                 }
             }
             data_for_extension.requested_json = requested_json;
