@@ -302,7 +302,7 @@ function injectJson_setup_connection_with_extension() {
             var object_to_return = window;
             var result_builder = {};
             var requested_json = result_builder;
-            if (obj_name && !pull_all_values) {
+            if (obj_name) {
                 // if the object is not found, try requiring it.
                 if (object_to_return.hasOwnProperty(obj_name)) {
                     object_to_return = object_to_return[obj_name];
