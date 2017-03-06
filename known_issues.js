@@ -123,7 +123,7 @@
         ,
         {
             "description": "git: HSR wizard with in valid dates has many new unit errors",
-            "regexMatch": "Check in date should be:.*, actually is: .*",
+            "regexMatch": "Check .* date should be:.*, actually is: .*",
             "bug": "https://jira/jira/browse/BHS-9373"
         }
         ,
