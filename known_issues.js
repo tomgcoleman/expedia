@@ -30,5 +30,17 @@
             "regexMatch": "For hotel .* Map link must be visible.",
             "bug": "https://jira/jira/browse/BHS-9342"
         }
+        ,
+        {
+            "description": "git: Map link data attribute should be MapInListing",
+            "regexMatch": "The 'data-track' attribute of see map link should be 'HOT:SR:MapInListing'",
+            "bug": "https://jira/jira/browse/BHS-9364"
+        }
+        ,
+        {
+            "description": "git: Sponsored listing description headline in travel ad should be visible",
+            "regexMatch": "For hotel .* : Sponsored listing .* headline in travel ad should be visible.'",
+            "bug": "https://jira/jira/browse/BHS-9365"
+        }
     ]
 }
