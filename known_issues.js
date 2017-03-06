@@ -42,5 +42,18 @@
             "regexMatch": "For hotel .* : Sponsored listing .* headline in travel ad should be visible.'",
             "bug": "https://jira/jira/browse/BHS-9365"
         }
+        ,
+        {
+            "description": "git: Expedia Rate label must be visible for ESR hotels.",
+            "regexMatch": "For hotel .* : Expedia Rate label must be visible for ESR hotels.",
+            "bug": "https://jira/jira/browse/BHS-9366"
+        }
+        ,
+        {
+            "description": "git: Page title phone number is visible",
+            "regexMatch": "Page title phone number is visible",
+            "bug": "https://jira/jira/browse/BHS-9367"
+        }
+
     ]
 }
