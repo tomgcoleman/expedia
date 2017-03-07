@@ -39,7 +39,7 @@
         ,
         {
             "description": "git: Sponsored listing description headline in travel ad should be visible",
-            "regexMatch": "For hotel .* : Sponsored listing .* headline in travel ad should be visible.'",
+            "regexMatch": "For hotel .* : Sponsored listing .* in travel ad should be visible.",
             "bug": "https://jira/jira/browse/BHS-9365"
         }
         ,
@@ -131,6 +131,12 @@
             "description": "git: ESR disclaimer must be visible.",
             "regexMatch": "ESR disclaimer must be visible.",
             "bug": "https://jira/jira/browse/BHS-9374"
+        }
+        ,
+        {
+            "description": "git: Travel link-off hyperlink must be visible",
+            "regexMatch": "Travel link-off hyperlink must be visible",
+            "bug": "https://jira/jira/browse/BHS-9397"
         }
     ]
 }
