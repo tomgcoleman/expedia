@@ -162,5 +162,35 @@
             "regexMatch": "The number of rooms should match with expected value",
             "bug": "https://jira/jira/browse/BHS-9403"
         }
+        ,
+        {
+            "description": "git: Filter select to zero triggers many errors",
+            "regexMatch": "Hotel name filter submit button must be enabled",
+            "bug": "https://jira/jira/browse/BHS-9403"
+        }
+        ,
+        {
+            "description": "git: Filter select to zero triggers many errors",
+            "regexMatch": "Omniture value for Hotel Name filter orientation should match with expected",
+            "bug": "https://jira/jira/browse/BHS-9403"
+        }
+        ,
+        {
+            "description": "git: Filter select to zero triggers many errors",
+            "regexMatch": "Hotel name filter orientation clear button should be visible",
+            "bug": "https://jira/jira/browse/BHS-9403"
+        }
+        ,
+        {
+            "description": "git: Filter select to zero triggers many errors",
+            "regexMatch": "Hotel name is not displayed in the orientation container",
+            "bug": "https://jira/jira/browse/BHS-9403"
+        }
+        ,
+        {
+            "description": "git: Filter select to zero triggers many errors",
+            "regexMatch": "Hotel name text box doesn't contain the hotel name",
+            "bug": "https://jira/jira/browse/BHS-9403"
+        }
     ]
 }
