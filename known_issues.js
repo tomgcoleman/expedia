@@ -144,6 +144,12 @@
             "regexMatch": "The selected sort in the URL should match the visibly selected sort.",
             "bug": "https://jira/jira/browse/BHS-9398"
         }
+        ,
+        {
+            "description": "git: The guest rating sort is incorrect",
+            "regexMatch": "The guest rating sort is incorrect",
+            "bug": "https://jira/jira/browse/BHS-9399"
+        }
 
     ]
 }
