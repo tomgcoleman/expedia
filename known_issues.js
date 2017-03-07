@@ -138,5 +138,12 @@
             "regexMatch": "Travel link-off hyperlink must be visible",
             "bug": "https://jira/jira/browse/BHS-9397"
         }
+        ,
+        {
+            "description": "git: The selected sort in the URL should match the visibly selected sort.",
+            "regexMatch": "The selected sort in the URL should match the visibly selected sort.",
+            "bug": "https://jira/jira/browse/BHS-9398"
+        }
+
     ]
 }
