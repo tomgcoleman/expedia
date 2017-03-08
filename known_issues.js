@@ -198,5 +198,17 @@
             "regexMatch": "The hotel name sort is incorrect! PreviousHotelName",
             "bug": "https://jira/jira/browse/BHS-9405"
         }
+        ,
+        {
+            "description": "git: Filter checkbox is not checked",
+            "regexMatch": "filter checkbox is not checked",
+            "bug": "https://jira/jira/browse/BHS-9417"
+        }
+        ,
+        {
+            "description": "git: Filter checkbox is not checked",
+            "regexMatch": "Filter orientation must appear if filtered by",
+            "bug": "https://jira/jira/browse/BHS-9417"
+        }
     ]
 }
