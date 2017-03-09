@@ -210,5 +210,23 @@
             "regexMatch": "Filter orientation must appear if filtered by",
             "bug": "https://jira/jira/browse/BHS-9417"
         }
+        ,
+        {
+            "description": "git: Skelly : Footer should be visible",
+            "regexMatch": "Footer should be visible",
+            "bug": "https://jira/jira/browse/BHS-9442"
+        }
+        ,
+        {
+            "description": "git: Skelly : Hotwire banner container should be visible",
+            "regexMatch": "Hotwire banner container should be visible",
+            "bug": "https://jira/jira/browse/BHS-9443"
+        }
+        ,
+        {
+            "description": "git: Star filter count should display after selecting filter",
+            "regexMatch": "Hotel Class filter count should display even after we select any one of the hotel class",
+            "bug": "https://jira/jira/browse/BHS-9444"
+        }
     ]
 }
