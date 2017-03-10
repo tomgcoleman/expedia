@@ -232,7 +232,13 @@
         {
             "description": "git: The 'data-track' attribute of see details should be 'HOT:SR:MapSeeDetails'",
             "regexMatch": "The 'data-track' attribute of see details should be 'HOT:SR:MapSeeDetails'",
-            "bug": "https://jira/jira/browse/BHS-9541"
+            "bug": "https://jira/jira/browse/BHS-9451"
+        }
+        ,
+        {
+            "description": "git: Dynamic strike price data attributes incoorect",
+            "regexMatch": "Dynamic strike price does not have correct value for attribute 'data-",
+            "bug": "https://jira/jira/browse/BHS-9452"
         }
     ]
 }
