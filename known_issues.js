@@ -246,5 +246,11 @@
             "regexMatch": "Wizard error message must be visible",
             "bug": "https://jira/jira/browse/BHS-9455"
         }
+        ,
+        {
+            "description": "git: IS: Show more link for Alternate hotel name should displays for Payment sub-section.",
+            "regexMatch": "Show more link for Alternate hotel name should displays for Payment sub-section.",
+            "bug": "https://jira/jira/browse/BHS-9462"
+        }
     ]
 }
