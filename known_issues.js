@@ -240,5 +240,11 @@
             "regexMatch": "Dynamic strike price does not have correct value for attribute 'data-",
             "bug": "https://jira/jira/browse/BHS-9452"
         }
+        ,
+        {
+            "description": "git: Wizard error message must be visible",
+            "regexMatch": "Wizard error message must be visible",
+            "bug": "https://jira/jira/browse/BHS-9455"
+        }
     ]
 }
