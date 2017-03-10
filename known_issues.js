@@ -228,5 +228,11 @@
             "regexMatch": "Hotel Class filter count should display even after we select any one of the hotel class",
             "bug": "https://jira/jira/browse/BHS-9444"
         }
+        ,
+        {
+            "description": "git: The 'data-track' attribute of see details should be 'HOT:SR:MapSeeDetails'",
+            "regexMatch": "The 'data-track' attribute of see details should be 'HOT:SR:MapSeeDetails'",
+            "bug": "https://jira/jira/browse/BHS-9541"
+        }
     ]
 }
