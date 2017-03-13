@@ -21,7 +21,7 @@
         ,
         {
             "description": "git: Large footer ads should be visible in breakpoint: 1251, but actually is hidden",
-            "textMatch": "Large footer ads should be visible in breakpoint: .* but actually is hidden",
+            "regexMatch": "Large footer ads should be visible in breakpoint: .* but actually is hidden",
             "bug": "https://jira/jira/browse/BHS-9341"
         }
         ,
