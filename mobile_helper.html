@@ -4,10 +4,22 @@
 <html lang="en">
 <head>
     <!-- Bootstrap, Twitter's open source UI framework -->
-    <link rel="stylesheet" href="http://twitter.github.io/bootstrap/assets/css/bootstrap.css"></link>
+    <link rel="stylesheet" href="http://twitter.github.io/bootstrap/assets/css/bootstrap.css"/>
 
     <!-- jQuery -->
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <style>
+        .remove_x {color: red; text-align: center}
+        .remove_x:hover {color:blue; cursor: pointer; text-decoration: underline;}
+        td {padding: 3px;}
+        select {font-size: larger;}
+        input {font-size: larger;}
+        .btn {font-size: larger;}
+        #add-optional-button {background-color: lightgreen;}
+        #add-optional-key, #add-optional-value {background-color: lightgoldenrodyellow;}
+
+    </style>
 </head>
 <body>
 <div class="container">
@@ -90,12 +102,12 @@
 
             <br><br>
 
-            <input type='checkbox' id='checkbox-use-dates' checked='yes'/>
+            <input type='checkbox' id='checkbox-use-dates' checked="checked"/>
             <label for='checkbox-use-dates'>put dates in url</label>
             <input type="number" id='dates-offset' value='30' size='3'/>
             <input type="number" id='dates-duration' value='5' size='3'/>
             <br>
-            <input type='checkbox' id='checkbox-create-link'  checked='yes'/>
+            <input type='checkbox' id='checkbox-create-link'  checked="checked"/>
             <label for='checkbox-create-link'>do not navigate, but show URL here</label>
             <br>
             <a id='inject-link-here' target="_tab" style="max-width=400px">.</a>
@@ -111,77 +123,139 @@
                 <tr>
                     <td>Experiments:<td>
                 </tr>
-                <tr class="experiment">
-                    <td>6248</td>
-                    <td>HSR and HIS combined</td>
+                <tr class="experiment_row">
+                    <td>13065</td>
+                    <td>HIS home away amenity</td>
                 </tr>
-                <tr class="experiment">
-                    <td>6172</td>
-                    <td>Only HSR - Hotel Search Results</td>
+                <tr class="experiment_row">
+                    <td>12445</td>
+                    <td>HIS photo split screen</td>
                 </tr>
-                <tr class="experiment">
-                    <td>6169</td>
-                    <td>Only HIS - Hotel Infosite</td>
+                <tr class="experiment_row">
+                    <td>11358</td>
+                    <td>HSR skelliton</td>
                 </tr>
-                <tr class="experiment">
-                    <td>3082</td>
-                    <td>supress eds popup</td>
+                <tr class="experiment_row">
+                    <td>13003</td>
+                    <td>HSR urgency color</td>
                 </tr>
-                <tr class="experiment">
-                    <td>2510</td>
-                    <td>domain v2</td>
+                <tr class="experiment_row">
+                    <td>13259</td>
+                    <td>HSR remove star rating</td>
                 </tr>
+            </table>
+            <table border="2">
                 <tr>
                     <td>Hotels:<td>
                 </tr>
                 <!--<tr onclick="$('#hotel-id').val(5); $('#city-name').val('Los Angeles, CA')">-->
-                <tr id="hotel1">
+                <tr class="hotel_row">
                     <td>5</td>
-                    <td>ESR : Sheraton Los Angeles</td>
+                    <td>ESR : Sheraton</td>
+                    <td>Los Angeles</td>
                 </tr>
                 <!--<tr onclick="$('#hotel-id').val(140596); $('#city-name').val('Las Vegas, Nevada')">-->
-                <tr id="hotel2">
+                <tr class="hotel_row">
                     <td>140596</td>
                     <td>ESR : Bellagio</td>
+                    <td>Las Vegas</td>
                 <!--<tr onclick="$('#hotel-id').val(4925017); $('#city-name').val('Mestre, Italy')">-->
-                <tr id="hotel3">
-                    <td>4925017</td>
-                    <td>ETP : later, IT</td>
+                <tr class="hotel_row">
+                    <td>1109673</td>
+                    <td>ETP : later</td>  <!-- verified pay later -->
+                    <td>Murcia Spain</td>
                 </tr>
                 <!--<tr onclick="$('#hotel-id').val(27566); $('#city-name').val('Santa Cruz, CA')">-->
-                <tr id="hotel4">
+                <tr class="hotel_row">
                     <td>27566</td>
-                    <td>ETP : deposit, CA</td>
+                    <td>ETP : deposit</td>  <!--  verified hotel is deposit hotel -->
+                    <td>LA California</td>
                 </tr>
                 <!--<tr onclick="$('#hotel-id').val(3893017); $('#city-name').val('Saudi Arabia')">-->
-                <tr id="hotel5">
-                    <td>3893017</td>
-                    <td>Pegasus : Corp Exec, Saudi</td>
-                </tr>
+                <!--<tr class="hotel_row">-->
+                    <!--<td>3893017</td>-->
+                    <!--<td>Pegasus : Corp Exec</td>-->
+                    <!--<td>Saudi Arabia</td>-->
+                <!--</tr>-->
                 <!--<tr onclick="$('#hotel-id').val(2281311); $('#city-name').val('Sold Out')">-->
-                <tr id="hotel6">
-                    <td>2281311</td>
-                    <td>Sold Out</td>
+                <tr class="hotel_row">
+                    <td>16535</td>
+                    <td>Sold Out</td>  <!-- verified sold out many months ahead -->
+                    <td>Jalisco, Mexico</td>
                 </tr>
                 <!--<tr onclick="$('#hotel-id').val(2847); $('#city-name').val('Surfside, FL')">-->
-                <tr id="hotel7">
-                    <td>2847</td>
-                    <td>Inactive Generic</td>
+                <tr class="hotel_row">
+                    <td>1801</td>
+                    <td>ETP : pay later</td>
+                    <td>Niagara Falls Canada</td>
                 </tr>
                 <!--<tr onclick="$('#hotel-id').val(534776); $('#city-name').val('Kissimmee, FL')">-->
-                <tr id="hotel8">
-                    <td>534776</td>
-                    <td>Inactive With Site</td>
+                <tr class="hotel_row">
+                    <td>4855804</td>
+                    <td>ESR 5 star</td>
+                    <td>Ethiopia</td>
                 </tr>
                 <!--<tr onclick="$('#hotel-id').val(1831238); $('#city-name').val('Chicago, IL')">-->
-                <tr id="hotel9">
-                    <td>1831238</td>
-                    <td>Inactive With Reviews</td>
+                <tr class="hotel_row">
+                    <td>22122</td>
+                    <td>ETP deposit</td>
+                    <td>Koloa Hawaii</td>
                 </tr>
                 <!--<tr onclick="$('#hotel-id').val(4049454); $('#city-name').val('Cloud, FL')">-->
-                <tr id="hotel10">
-                    <td>4049454</td>
-                    <td>Inactive With Site and Reviews</td>
+                <tr class="hotel_row">
+                    <td>1159107</td>
+                    <td>ETP pay later</td>
+                    <td>Granbury TX</td>
+                </tr>
+            </table>
+            <table id="optional_arguments" border="1">
+                <tr>
+                    <th>apply item</th>
+                    <th>url key</th>
+                    <th>value</th>
+                    <th>remove</th>
+                </tr>
+                <tr class="url_key_value_add_row">
+                    <td>
+                        <input id="add-optional-button" type="button" class="update-button btn btn-primary" value="add" />
+                    </td>
+                    <td>
+                        <input type="text" value="key" id="add-optional-key"/>
+                    </td>
+                    <td>
+                        <input type="text" value="value" id="add-optional-value"/>
+                    </td>
+                    <td class="remove_x">x</td>
+                </tr>
+                <tr class="url_key_value_row">
+                    <td><input type="checkbox"/></td>
+                    <td>qunit</td>
+                    <td>1</td>
+                    <td class="remove_x">x</td>
+                </tr>
+                <tr class="url_key_value_row">
+                    <td><input type="checkbox"/></td>
+                    <td>debugUITK</td>
+                    <td>true</td>
+                    <td class="remove_x">x</td>
+                </tr>
+                <tr class="url_key_value_row">
+                    <td><input type="checkbox"/></td>
+                    <td>dctkdebug</td>
+                    <td>true</td>
+                    <td class="remove_x">x</td>
+                </tr>
+                <tr class="url_key_value_row">
+                    <td><input type="checkbox"/></td>
+                    <td>bundling-debug</td>
+                    <td>true</td>
+                    <td class="remove_x">x</td>
+                </tr>
+                <tr class="url_key_value_row">
+                    <td><input type="checkbox"/></td>
+                    <td>debug</td>
+                    <td>true</td>
+                    <td class="remove_x">x</td>
                 </tr>
             </table>
             . . . . click a row<br>
@@ -282,27 +356,7 @@
         return date_result;
     }
 
-    function buildUrlArgs( page_type ){
-        if( document.getElementById('checkbox-use-dates').checked ){
-            var offset = document.getElementById('dates-offset').value / 1;
-            var duration = document.getElementById('dates-duration').value / 1;
-            var start_date = calculateDate( offset );
-            var end_date = calculateDate( offset + duration );
-            if( page_type == 'hsr' ){
-                // &startDate=01/06/2015&startDate=01/12/2015
-                return "&adults=2&sort=mostPopular&page=1&regionId=178280" +
-                        "daysInFuture=" + offset +
-                        "&stayLength=" + duration;
-            } else {
-                return "chkin=" + start_date.month + "-" + start_date.day + "-" + start_date.year +
-                        "&chkout=" + end_date.month + "-" + end_date.day + "-" + end_date.year;
-            }
-        } else {
-            return '';
-        }
-    }
-
-    function generateUrlForTripAdvisor(environmentUrl, hotelId) {
+    function generateUrlForTripAdvisor(hotelId) {
         /* http://wwwexpediacom.trunk.sb.karmalab.net/MobileHotel/Offers?hotelId=2163007&useCacheForAirAttach=false&checkInDate=2014-12-17&checkOutDate=2014-12-18&room1=2&chkin=5/17/2014&tpid=1&ICMDTL=htl.2163007.taid.1152288.geoid.60878.testslice..clickid.VH33wgokKGkAAE2kIzgAAAAS&chkout=5/18/2014&eapid=21187&mctc=9&paandi=true&rm1=a2&ICMCID=Meta.tripa.Expedia_US-MP */
 
         var environmentUrl = getEnvironment();
@@ -323,12 +377,12 @@
                 '&tpid=1&ICMDTL=htl.2163007.taid.1152288.geoid.60878.testslice..clickid.VH33wgokKGkAAE2kIzgAAAAS' +
                     // '&chkout=5/18/2015' +
                 '&chkout=' + end_date.month + '/' + end_date.day + '/' + end_date.year +
-                '&eapid=21187&mctc=9&paandi=true&rm1=a2&ICMCID=Meta.tripa.Expedia_US-MP';
+                '&eapid=21187&mctc=9&paandi=true&rm1=a2&ICMCID=Meta.tripa.Expedia_US-MP' +
+                gatherUrlKeyValues();
     }
 
-    function generateUrlForIS(environmentUrl, hotelId) {
+    function generateUrlForIS(hotelId) {
         // https://www.expedia.com/go/hotel/info/12345/2017-04-19/2017-04-27?SrchCity=SEA&NumRoom=1&NumAdult-Room1=1
-//        return 'http://' + environmentUrl + '/h' + hotelId + '.Hotel-Information?' + buildUrlArgs();
 
         var environmentUrl = getEnvironment();
         var offset = document.getElementById('dates-offset').value / 1;
@@ -339,17 +393,22 @@
         var date_a = start_date.year + '-' + start_date.month + '-' + start_date.day;
         var date_b = end_date.year + '-' + end_date.month + '-' + end_date.day;
 
-        return 'http://' + environmentUrl + '/go/hotel/info/' + hotelId + '/' + date_a + '/' + date_b + '?NumRoom=1&NumAdult-Room1=1';
+        var url = 'http://' + environmentUrl + '/go/hotel/info/' + hotelId + '/' + date_a + '/' + date_b + '?NumRoom=1&NumAdult-Room1=1';
+        url += gatherUrlKeyValues();
+        return url;
     }
 
-    function generateUrlForSR(environmentUrl, cityName) {
+    function generateUrlForSR(cityName) {
         // https://www.expedia.com/go?type=Hotel-Search&destination=NYC&daysInFuture=35&stayLength=8
         //             var end_date = calculateDate( offset + duration );
 
+        var environmentUrl = getEnvironment();
         var offset = document.getElementById('dates-offset').value / 1;
         var duration = document.getElementById('dates-duration').value / 1;
 
-        return 'http://' + environmentUrl + '/go?type=Hotel-Search&destination=' + cityName + '&daysInFuture=' + offset + '&stayLength=' + duration;
+        var url = 'http://' + environmentUrl + '/go?type=Hotel-Search&destination=' + cityName + '&daysInFuture=' + offset + '&stayLength=' + duration;
+        url += gatherUrlKeyValues();
+        return url;
     }
 
     $('#set-bucket-button').click(function() {
@@ -409,24 +468,21 @@
     });
 
     $('#go-is-button').click(function() {
-        var environmentUrl = getEnvironment();
         var hotelId = $('#hotel-id').val();
 
-        navigateToUrl(generateUrlForIS(environmentUrl, hotelId));
+        navigateToUrl(generateUrlForIS(hotelId));
     });
 
     $('#go-is-trip-button').click(function() {
-        var environmentUrl = getEnvironment();
         var hotelId = $('#hotel-id').val();
 
-        navigateToUrl(generateUrlForTripAdvisor(environmentUrl, hotelId));
+        navigateToUrl(generateUrlForTripAdvisor(hotelId));
     });
 
     $('#go-sr-button').click(function() {
-        var environmentUrl = getEnvironment();
         var cityName = $('#city-name').val();
 
-        navigateToUrl(generateUrlForSR(environmentUrl, cityName));
+        navigateToUrl(generateUrlForSR(cityName));
     });
 
     $('#mobile-off').click(function() {
@@ -470,12 +526,27 @@
         navigateToUrl( homeUrl );
     });
 
-    $('tr').click(selectExperiment);
+    $('.experiment_row').click(selectExperiment);
+    $('.hotel_row').click(selectHotel);
+//    $('.url_key_value_row').click(selectKeyValue);
 
+    $('#add-optional-button').click(applyUrlKey);
+
+    $('.remove_x').click(removeUrlKey);
+
+    function selectHotel(evt) {
+        var row = evt.target.parentElement;
+        var hotel_id = row.children[0].innerHTML;
+        $('#hotel-id').val(hotel_id);
+        var city_name = row.children[2].innerHTML;
+        $('#city-name').val(city_name);
+    }
     function selectExperiment(evt) {
         console.log('select experiment');
         console.log(evt.target);
         console.log(evt.target.parentElement);
+
+        // todo: check if this is row or cell
 
         var row = evt.target.parentElement;
         var exp_id = row.children[0].innerHTML;
@@ -498,6 +569,84 @@
         }
     }
     updateExperimentsFromLocalStorage();
+
+    function changeUrlKey(key, value) {
+        var url_keys_obj = {};
+        if (localStorage.url_keys) {
+            url_keys_obj = JSON.parse(localStorage.url_keys);
+        }
+        if (url_keys_obj.item_list) {
+            for (var i = 0 ; i < url_keys_obj.item_list.length ; i++) {
+                if (key == url_keys_obj.item_list[i].key) {
+                    url_keys_obj.item_list.splice(i,1);
+                    i = i - 1;
+                }
+            }
+        } else {
+            url_keys_obj.item_list = [];
+        }
+        if (url_keys_obj.item_list.length > 4) {
+            url_keys_obj.item_list.pop();
+        }
+        if (value) {
+            url_keys_obj.item_list.unshift({
+                key: key,
+                value: value
+            });
+        }
+        localStorage.url_keys = JSON.stringify(url_keys_obj);
+        updateUrlKeys();
+    }
+
+    function applyUrlKey() {
+        var key = $('#add-optional-key').val();
+        var value = $('#add-optional-value').val();
+        changeUrlKey(key, value);
+    }
+
+    function removeUrlKey(evt) {
+        var row = evt.target.parentElement;
+        var url_key = row.children[1].innerHTML;
+        var url_value = row.children[2].innerHTML;
+        changeUrlKey(url_key, '');
+    }
+
+    function updateUrlKeys() {
+        var url_keys_obj = {};
+        if (localStorage.url_keys) {
+            url_keys_obj = JSON.parse(localStorage.url_keys);
+        }
+        var url_keys_rows = $('.url_key_value_row');
+        if (url_keys_obj.item_list) {
+            for (var i = 0 ; i < url_keys_obj.item_list.length && i < url_keys_rows.length ; i++) {
+                var key = url_keys_obj.item_list[i].key;
+                var value = url_keys_obj.item_list[i].value;
+
+                url_keys_rows[i].children[1].innerHTML = key;
+                url_keys_rows[i].children[2].innerHTML = value;
+            }
+        } else {
+            url_keys_obj.item_list = [];
+        }
+    }
+    function gatherUrlKeyValues() {
+        var urlKeyValues = '';
+        var url_keys_rows = $('.url_key_value_row');
+        var url_key_value_checkboxes = $('.url_key_value_row input');
+        for (var i = 0 ; i < url_keys_rows.length && i < url_keys_rows.length ; i++) {
+
+            var checked = url_key_value_checkboxes.eq(i).is(":checked");
+            var key = url_keys_rows[i].children[1].innerHTML;
+            var value = url_keys_rows[i].children[2].innerHTML;
+
+            if (checked) {
+                urlKeyValues += '&' + key + '=' + value;
+            }
+        }
+        return urlKeyValues;
+    }
+
+    updateUrlKeys();
 
 </script>
 </body>
