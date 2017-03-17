@@ -282,5 +282,11 @@
             "regexMatch": "Search wizard expand toggle is visible",
             "bug": "https://jira/jira/browse/BHS-9549"
         }
+        ,
+        {
+            "description": "git: HotWire : Header should be visible",
+            "regexMatch": "Header should be visible",
+            "bug": "https://jira/jira/browse/BHS-9550"
+        }
     ]
 }
