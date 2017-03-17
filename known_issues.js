@@ -252,5 +252,11 @@
             "regexMatch": "Show more link for Alternate hotel name should displays for Payment sub-section.",
             "bug": "https://jira/jira/browse/BHS-9462"
         }
+        ,
+        {
+            "description": "git: langid change in case in config.langId to config.langid",
+            "regexMatch": "Test Omniture values are set correctly when the page loads is terminated due to an exception",
+            "bug": "https://jira/jira/browse/BHS-9541"
+        }
     ]
 }
