@@ -258,5 +258,12 @@
             "regexMatch": "Test Omniture values are set correctly when the page loads is terminated due to an exception",
             "bug": "https://jira/jira/browse/BHS-9541"
         }
+        ,
+        {
+            "description": "git: Destination city name should be in page title when chosen from popular destinations",
+            "regexMatch": "Destination city name should be in page title as",
+            "bug": "https://jira/jira/browse/BHS-9542"
+        }
+
     ]
 }
