@@ -51,7 +51,7 @@
         ,
         {
             "description": "git: Page title phone number is visible",
-            "regexMatch": "Page title phone number is visible",
+            "regexMatch": "Page title phone number .* visible",
             "bug": "https://jira/jira/browse/BHS-9367"
         }
         ,
