@@ -264,6 +264,12 @@
             "regexMatch": "Destination city name should be in page title as",
             "bug": "https://jira/jira/browse/BHS-9542"
         }
+        ,
+        {
+            "description": "git: 13147 blocks display of high level region",
+            "regexMatch": "high level region",
+            "bug": "https://jira/jira/browse/BHS-9544"
+        }
 
     ]
 }
