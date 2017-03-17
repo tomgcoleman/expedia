@@ -1,0 +1,68 @@
+[
+    {
+        "shortName": "opd_r_s",
+        "longName": "opd rewards silver 3500 lab",
+        "userName": "Opd_Rewards_silver@yahoo.com",
+        "password": "test123",
+        "colorLevel": "Silver",
+        "points": "4000",
+        "contact": "tocoleman@expedia.com",
+        "domain": "www.expedia.com",
+        "environment": "lab"
+    },
+    {
+        "shortName": "opd_r_g",
+        "longName": "opd rewards gold 3500 lab",
+        "userName": "Opd_Rewards_gold@yahoo.com",
+        "password": "test123",
+        "colorLevel": "Gold",
+        "points": "3500",
+        "contact": "tocoleman@expedia.com",
+        "domain": "www.expedia.com",
+        "environment": "lab"
+    },
+    {
+        "shortName": "swp_30",
+        "longName": "shop with points blue 4200 points",
+        "userName": "swp30@gmail.com",
+        "password": "exp12345",
+        "colorLevel": "blue",
+        "points": "4200",
+        "contact": "tocoleman@expedia.com",
+        "domain": "www.expedia.com",
+        "environment": "lab"
+    },
+    {
+        "shortName": "swp_p1s",
+        "longName": "shop with points silver 21000 points",
+        "userName": "swp_p1s@gmail.com",
+        "password": "exp12345",
+        "colorLevel": "silver",
+        "points": "21000",
+        "contact": "tocoleman@expedia.com",
+        "domain": "www.expedia.com",
+        "environment": "lab"
+    },
+    {
+        "shortName": "swp_p2g",
+        "longName": "shop with points gold  21000 points",
+        "userName": "swp_p2g@gmail.com",
+        "password": "exp12345",
+        "colorLevel": "gold",
+        "points": "21000",
+        "contact": "tocoleman@expedia.com",
+        "domain": "www.expedia.com",
+        "environment": "lab"
+    },
+    {
+        "shortName": "swp_p3g",
+        "longName": "shop with points blue  21000 points",
+        "userName": "swp_p3g@gmail.com",
+        "password": "exp12345",
+        "colorLevel": "blue",
+        "points": "21000",
+        "contact": "tocoleman@expedia.com",
+        "domain": "www.expedia.com",
+        "environment": "lab"
+    }
+]
