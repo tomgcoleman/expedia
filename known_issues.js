@@ -291,7 +291,7 @@
         ,
         {
             "description": "git: HotWire : test code error : #wizardTravellerSummaryAdults used",
-            "regexMatch": "Test Search wizard module verification when dated is terminated due to an exception.[\s\S]+Cannot read property '0' of null",
+            "regexMatch": "Test Search wizard module verification when dated is terminated due to an exception.[\\s\\S]+Cannot read property '0' of null",
             "bug": "https://jira/jira/browse/BHS-9551"
         }
     ]
