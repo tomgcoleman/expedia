@@ -81,7 +81,7 @@
         ,
         {
             "description": "git: The check-out date should store in sessionStorage",
-            "regexMatch": "The check-out date should store in sessionStorage",
+            "regexMatch": "The check-(out|in) date should store in sessionStorage",
             "bug": "https://jira/jira/browse/BHS-9372"
         }
         ,
