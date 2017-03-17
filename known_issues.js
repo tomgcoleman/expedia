@@ -270,6 +270,17 @@
             "regexMatch": "high level region",
             "bug": "https://jira/jira/browse/BHS-9544"
         }
-
+        ,
+        {
+            "description": "git: HotWire : For hotel X : Reservation number must be visible for ESR hotels.",
+            "regexMatch": "Reservation number must be visible for ESR hotels",
+            "bug": "https://jira/jira/browse/BHS-9547"
+        }
+        ,
+        {
+            "description": "git: HotWire : Search wizard expand toggle is visible",
+            "regexMatch": "Search wizard expand toggle is visible",
+            "bug": "https://jira/jira/browse/BHS-9549"
+        }
     ]
 }
