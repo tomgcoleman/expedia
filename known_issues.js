@@ -294,5 +294,11 @@
             "regexMatch": "Test Search wizard module verification when dated is terminated due to an exception",
             "bug": "https://jira/jira/browse/BHS-9551"
         }
+        ,
+        {
+            "description": "git: Show more link for Alternate hotel name should displays for Payment sub-section.",
+            "regexMatch": "Show more link for Alternate hotel name should displays for Payment sub-section",
+            "bug": "https://jira/jira/browse/BHS-9570"
+        }
     ]
 }
