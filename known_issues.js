@@ -306,5 +306,11 @@
             "regexMatch": "Test SWP verification when user sign in or not is terminated due to an exception. Message: Cannot read property .find",
             "bug": "https://jira/jira/browse/BHS-9611"
         }
+        ,
+        {
+            "description": "git: non Expedia brands are missing data attributes",
+            "regexMatch": "Dynamic strike price does not have correct value for attribute",
+            "bug": "https://jira/jira/browse/BHS-9613"
+        }
     ]
 }
