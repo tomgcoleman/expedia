@@ -300,5 +300,11 @@
             "regexMatch": "Show more link for Alternate hotel name should displays for Payment sub-section",
             "bug": "https://jira/jira/browse/BHS-9570"
         }
+        ,
+        {
+            "description": "git: Test code failure with SWP verification : hotel undefined",
+            "regexMatch": "Test SWP verification when user sign in or not is terminated due to an exception. Message: Cannot read property .find",
+            "bug": "https://jira/jira/browse/BHS-9611"
+        }
     ]
 }
