@@ -317,6 +317,15 @@
         }
         ,
         {
+            "pos": [
+                "hotwire"
+            ],
+            "description": "git: The value of adults should match with expected value",
+            "regexMatch": "The value of adults should match with expected value",
+            "bug": "https://jira/jira/browse/BHS-9570"
+        }
+        ,
+        {
             "description": "git: Test code failure with SWP verification : hotel undefined",
             "regexMatch": "Test SWP verification when user sign in or not is terminated due to an exception. Message: Cannot read property .find",
             "bug": "https://jira/jira/browse/BHS-9611"
