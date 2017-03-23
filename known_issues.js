@@ -272,30 +272,45 @@
         }
         ,
         {
+            "pos": [
+                "hotwire"
+            ],
             "description": "git: HotWire : For hotel X : Reservation number must be visible for ESR hotels.",
             "regexMatch": "Reservation number must be visible for ESR hotels",
             "bug": "https://jira/jira/browse/BHS-9547"
         }
         ,
         {
+            "pos": [
+                "hotwire"
+            ],
             "description": "git: HotWire : Search wizard expand toggle is visible",
             "regexMatch": "Search wizard expand toggle is visible",
             "bug": "https://jira/jira/browse/BHS-9549"
         }
         ,
         {
+            "pos": [
+                "hotwire"
+            ],
             "description": "git: HotWire : Header should be visible",
             "regexMatch": "Header should be visible",
             "bug": "https://jira/jira/browse/BHS-9550"
         }
         ,
         {
+            "pos": [
+                "hotwire"
+            ],
             "description": "git: HotWire : test code error : #wizardTravellerSummaryAdults used",
             "regexMatch": "Test Search wizard module verification when dated is terminated due to an exception",
             "bug": "https://jira/jira/browse/BHS-9551"
         }
         ,
         {
+            "pos": [
+                "hotwire"
+            ],
             "description": "git: Show more link for Alternate hotel name should displays for Payment sub-section.",
             "regexMatch": "Show more link for Alternate hotel name should displays for Payment sub-section",
             "bug": "https://jira/jira/browse/BHS-9570"
