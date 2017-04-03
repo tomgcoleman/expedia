@@ -342,5 +342,11 @@
             "regexMatch": "Yellow highlighting does not appear on any price",
             "bug": "https://jira/jira/browse/BHS-9718"
         }
+        ,
+        {
+            "description": "git: Duplicate ids",
+            "regexMatch": "There should have no duplicate IDs in HSR section",
+            "bug": "https://jira/jira/browse/BHS-9719"
+        }
     ]
 }
