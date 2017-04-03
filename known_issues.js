@@ -218,6 +218,9 @@
         }
         ,
         {
+            "pos": [
+                "hotwire"
+            ],
             "description": "git: Skelly : Hotwire banner container should be visible",
             "regexMatch": "Hotwire banner container should be visible",
             "bug": "https://jira/jira/browse/BHS-9443"
@@ -347,6 +350,12 @@
             "description": "git: Duplicate ids",
             "regexMatch": "There should have no duplicate IDs in HSR section",
             "bug": "https://jira/jira/browse/BHS-9719"
+        }
+        ,
+        {
+            "description": "git: visible checks failing for filters on tablet",
+            "regexMatch": "(POI|Star|filter).*should not be visible",
+            "bug": "https://jira/jira/browse/BHS-9720"
         }
     ]
 }
