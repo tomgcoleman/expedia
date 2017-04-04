@@ -357,5 +357,11 @@
             "regexMatch": "(POI|Star|filter).*should not be visible",
             "bug": "https://jira/jira/browse/BHS-9720"
         }
+        ,
+        {
+            "description": "git: hotwire banner in non hotwire pos",
+            "regexMatch": "Hotwire banner container should be visible.",
+            "bug": "https://jira/jira/browse/BHS-9729"
+        }
     ]
 }
