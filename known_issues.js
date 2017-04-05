@@ -363,5 +363,11 @@
             "regexMatch": "Hotwire banner container should be visible.",
             "bug": "https://jira/jira/browse/BHS-9729"
         }
+        ,
+        {
+            "description": "git: sponsored listing now showing drr",
+            "regexMatch": "DRR badge must be visible",
+            "bug": "https://jira/jira/browse/BHS-9743"
+        }
     ]
 }
