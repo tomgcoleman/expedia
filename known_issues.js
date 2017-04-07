@@ -393,5 +393,11 @@
             "regexMatch": "Amenities General title should match the Hotel Amenities title",
             "bug": "https://jira/jira/browse/BHS-9771"
         }
+        ,
+        {
+            "description": "git: dateless travelocity : duplicate tab ids",
+            "regexMatch": "all ids should be unique",
+            "bug": "https://jira/jira/browse/BHS-9772"
+        }
     ]
 }
