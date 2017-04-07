@@ -365,9 +365,33 @@
         }
         ,
         {
-            "description": "git: sponsored listing now showing drr",
-            "regexMatch": "DRR badge must be visible",
-            "bug": "https://jira/jira/browse/BHS-9743"
+            "description": "git: dateless travelocity : hotel details tab should be visible",
+            "regexMatch": "Hotel details tab should be visible",
+            "bug": "https://jira/jira/browse/BHS-9767"
+        }
+        ,
+        {
+            "description": "git: dateless travelocity : hotel amenities title should display",
+            "regexMatch": "Hotel amenities title should display",
+            "bug": "https://jira/jira/browse/BHS-9768"
+        }
+        ,
+        {
+            "description": "git: dateless travelocity : amenities should display",
+            "regexMatch": "Amenities.*should display",
+            "bug": "https://jira/jira/browse/BHS-9769"
+        }
+        ,
+        {
+            "description": "git: dateless travelocity : policies fee section feedback link should display",
+            "regexMatch": "Policies Fee section feedback link should display for HIS",
+            "bug": "https://jira/jira/browse/BHS-9770"
+        }
+        ,
+        {
+            "description": "git: dateless travelocity : Amenities General title should match the Hotel Amenities title",
+            "regexMatch": "Amenities General title should match the Hotel Amenities title",
+            "bug": "https://jira/jira/browse/BHS-9771"
         }
     ]
 }
