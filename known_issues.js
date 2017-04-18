@@ -399,5 +399,11 @@
             "regexMatch": "all ids should be unique",
             "bug": "https://jira/jira/browse/BHS-9772"
         }
+        ,
+        {
+            "description": "git: skelly automation : v5 off by one",
+            "regexMatch": "Value for the V5 should be",
+            "bug": "https://jira/jira/browse/BHS-9872"
+        }
     ]
 }
