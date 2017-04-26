@@ -455,6 +455,13 @@
         }
         ,
         {
+            "description": "git: sponsored hotel price missing when pages opened quickly",
+            "regexMatch": "For hotel .* : Hotel price must be visible.",
+            "bug": "https://jira/jira/browse/BHS-9959"
+        }
+
+        ,
+        {
             "description": "git: sponsored listings are missing the drr link",
             "regexMatch": "For hotel .* DRR badge must be visible.",
             "bug": "https://jira/jira/browse/BHS-9960"
