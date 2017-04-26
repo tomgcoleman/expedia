@@ -405,5 +405,47 @@
             "regexMatch": "Value for the V5 should be",
             "bug": "https://jira/jira/browse/BHS-9872"
         }
+        ,
+        {
+            "description": "git: page name in omniture is duplicated",
+            "regexMatch": "Value of dctk.omtr.eVar17 should be 'D=pageName', but it's page.Hotel-Search",
+            "bug": "https://jira/jira/browse/BHS-9956"
+        }
+        ,
+        {
+            "description": "git: missing filters should not be checked",
+            "regexMatch": "The 'data-track' attribute of rating filter . should be 'HOT:SR:StarRating:.Star'",
+            "bug": "https://jira/jira/browse/BHS-9957"
+        }
+        ,
+        {
+            "description": "git: missing filters should not be checked",
+            "regexMatch": "Star rating filter check box must be visible",
+            "bug": "https://jira/jira/browse/BHS-9957"
+        }
+        ,
+        {
+            "description": "git: missing filters should not be checked",
+            "regexMatch": "Star rating text must be visible",
+            "bug": "https://jira/jira/browse/BHS-9957"
+        }
+        ,
+        {
+            "description": "git: missing filters should not be checked",
+            "regexMatch": "Stars image in the filter must be visible",
+            "bug": "https://jira/jira/browse/BHS-9957"
+        }
+        ,
+        {
+            "description": "git: map icon missing when pages opened quickly",
+            "regexMatch": "Map .* A must be visible",
+            "bug": "https://jira/jira/browse/BHS-9959"
+        }
+        ,
+        {
+            "description": "git: sponsored listings are missing the drr link",
+            "regexMatch": "For hotel .* DRR badge must be visible.",
+            "bug": "https://jira/jira/browse/BHS-9960"
+        }
     ]
 }
