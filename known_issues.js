@@ -408,7 +408,7 @@
         ,
         {
             "description": "git: page name in omniture is duplicated",
-            "regexMatch": "Value of dctk.omtr.eVar17 should be 'D=pageName', but it's page.Hotel-Search",
+            "regexMatch": "Value of dctk.omtr.eVar17 should be 'D=pageName', but it's",
             "bug": "https://jira/jira/browse/BHS-9956"
         }
         ,
