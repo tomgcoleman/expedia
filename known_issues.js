@@ -459,5 +459,11 @@
             "regexMatch": "For hotel .* DRR badge must be visible.",
             "bug": "https://jira/jira/browse/BHS-9960"
         }
+        ,
+        {
+            "description": "git: strike price is not visible",
+            "regexMatch": "For hotel .* Hotel strike price must be visible.",
+            "bug": "https://jira/jira/browse/BHS-9960"
+        }
     ]
 }
