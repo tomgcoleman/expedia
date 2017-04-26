@@ -426,6 +426,12 @@
         ,
         {
             "description": "git: missing filters should not be checked",
+            "regexMatch": "Price filter .* must be visible.",
+            "bug": "https://jira/jira/browse/BHS-9957"
+        }
+        ,
+        {
+            "description": "git: missing filters should not be checked",
             "regexMatch": "Star rating filter check box must be visible",
             "bug": "https://jira/jira/browse/BHS-9957"
         }
