@@ -472,5 +472,17 @@
             "regexMatch": "For hotel .* Hotel strike price must be visible.",
             "bug": "https://jira/jira/browse/BHS-9960"
         }
+        ,
+        {
+            "description": "git: drr message not visible under heavy load",
+            "regexMatch": "For hotel .* : Drr message must be visible",
+            "bug": "https://jira/jira/browse/BHS-9980"
+        }
+        ,
+        {
+            "description": "git: new hotel tag not visible under heavy load",
+            "regexMatch": "new hotel should have the badge",
+            "bug": "https://jira/jira/browse/BHS-9981"
+        }
     ]
 }
