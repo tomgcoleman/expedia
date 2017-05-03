@@ -504,6 +504,12 @@
         }
         ,
         {
+            "description": "git: page number button not showing",
+            "regexMatch": "Page number button must be visible.",
+            "bug": "https://jira/jira/browse/BHS-10048"
+        }
+        ,
+        {
             "description": "git: hotel count missing",
             "regexMatch": "Hotel count label must be visible",
             "bug": "https://jira/jira/browse/BHS-10049"
