@@ -484,5 +484,29 @@
             "regexMatch": "new hotel should have the badge",
             "bug": "https://jira/jira/browse/BHS-9981"
         }
+        ,
+        {
+            "description": "git: back to top link missing",
+            "regexMatch": "Back to top link must be visible",
+            "bug": "https://jira/jira/browse/BHS-10047"
+        }
+        ,
+        {
+            "description": "git: pagination controls not showing",
+            "regexMatch": "Pagination control must be visible",
+            "bug": "https://jira/jira/browse/BHS-10048"
+        }
+        ,
+        {
+            "description": "git: next and previous page links missing",
+            "regexMatch": "page button must be visible",
+            "bug": "https://jira/jira/browse/BHS-10048"
+        }
+        ,
+        {
+            "description": "git: hotel count missing",
+            "regexMatch": "Hotel count label must be visible",
+            "bug": "https://jira/jira/browse/BHS-10049"
+        }
     ]
 }
