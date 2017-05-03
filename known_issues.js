@@ -294,7 +294,8 @@
         ,
         {
             "pos": [
-                "hotwire"
+                "hotwire",
+                "voyages"
             ],
             "description": "git: HotWire : Header should be visible",
             "regexMatch": "Header should be visible",
