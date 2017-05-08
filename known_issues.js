@@ -515,5 +515,11 @@
             "regexMatch": "Hotel count label must be visible",
             "bug": "https://jira/jira/browse/BHS-10049"
         }
+        ,
+        {
+            "description": "git: vacation sort not available",
+            "regexMatch": "vacationRentalSort should .* with css: button",
+            "bug": "https://jira/jira/browse/BHS-none"
+        }
     ]
 }
