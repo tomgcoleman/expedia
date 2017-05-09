@@ -521,5 +521,11 @@
             "regexMatch": "vacationRentalSort should .* with css: button",
             "bug": "https://jira/jira/browse/BHS-none"
         }
+        ,
+        {
+            "description": "git: hotel booking error message missing",
+            "regexMatch": "Hotel booking error message must be visible.",
+            "bug": "https://jira/jira/browse/BHS-10087"
+        }
     ]
 }
