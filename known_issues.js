@@ -533,5 +533,11 @@
             "regexMatch": "click_pagination_pageNext - failed to change pagination",
             "bug": "https://jira/jira/browse/BHS-none"
         }
+        ,
+        {
+            "description": "git: wrong page name in eVar17 : page.Package.FH.Hotel-Search.Error",
+            "regexMatch": "Value of dctk.omtr.eVar17 should be 'page.Hotel-Search', but it's page.Package.FH.Hotel-Search.Error",
+            "bug": "https://jira.sea.corp.expecn.com/jira/browse/BHS-10152"
+        }
     ]
 }
