@@ -4,10 +4,10 @@
 <html lang="en">
 <head>
     <!-- Bootstrap, Twitter's open source UI framework -->
-    <link rel="stylesheet" href="http://twitter.github.io/bootstrap/assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="https://twitter.github.io/bootstrap/assets/css/bootstrap.css"/>
 
     <!-- jQuery -->
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 
     <style>
         .remove_x {color: red; text-align: center}
@@ -313,11 +313,11 @@
                 experimentBucket = valueParts[1];
             }
         }
-        return 'http://' + environmentUrl + '/tools/abacus/overrides?abov=' + experimentId + '|' + experimentMiddle + '|' + experimentBucket;
+        return 'https://' + environmentUrl + '/tools/abacus/overrides?abov=' + experimentId + '|' + experimentMiddle + '|' + experimentBucket;
     }
 
     function generateUrlForSeeBucket(environmentUrl, experimentId) {
-        return 'http://' + environmentUrl + '/tools/abacus/test?expid=' + experimentId;
+        return 'https://' + environmentUrl + '/tools/abacus/test?expid=' + experimentId;
     }
 
     function calculateDate(offset)
@@ -357,7 +357,7 @@
     }
 
     function generateUrlForTripAdvisor(hotelId) {
-        /* http://wwwexpediacom.trunk.sb.karmalab.net/MobileHotel/Offers?hotelId=2163007&useCacheForAirAttach=false&checkInDate=2014-12-17&checkOutDate=2014-12-18&room1=2&chkin=5/17/2014&tpid=1&ICMDTL=htl.2163007.taid.1152288.geoid.60878.testslice..clickid.VH33wgokKGkAAE2kIzgAAAAS&chkout=5/18/2014&eapid=21187&mctc=9&paandi=true&rm1=a2&ICMCID=Meta.tripa.Expedia_US-MP */
+        /* https://wwwexpediacom.trunk.sb.karmalab.net/MobileHotel/Offers?hotelId=2163007&useCacheForAirAttach=false&checkInDate=2014-12-17&checkOutDate=2014-12-18&room1=2&chkin=5/17/2014&tpid=1&ICMDTL=htl.2163007.taid.1152288.geoid.60878.testslice..clickid.VH33wgokKGkAAE2kIzgAAAAS&chkout=5/18/2014&eapid=21187&mctc=9&paandi=true&rm1=a2&ICMCID=Meta.tripa.Expedia_US-MP */
 
         var environmentUrl = getEnvironment();
         var offset = document.getElementById('dates-offset').value;
@@ -365,7 +365,7 @@
         var start_date = calculateDate( offset );
         var end_date = calculateDate( duration );
 
-        return 'http://' + environmentUrl + '/MobileHotel/Offers?hotelId=' + hotelId +
+        return 'https://' + environmentUrl + '/MobileHotel/Offers?hotelId=' + hotelId +
                 '&useCacheForAirAttach=false' +
                     // '&checkInDate=2015-5-17' +
                 '&checkInDate=' + start_date.year + '-' + start_date.month + '-' + start_date.day +
@@ -393,7 +393,8 @@
         var date_a = start_date.year + '-' + start_date.month + '-' + start_date.day;
         var date_b = end_date.year + '-' + end_date.month + '-' + end_date.day;
 
-        var url = 'http://' + environmentUrl + '/go/hotel/info/' + hotelId + '/' + date_a + '/' + date_b + '?NumRoom=1&NumAdult-Room1=1';
+        var url = '
+        //' + environmentUrl + '/go/hotel/info/' + hotelId + '/' + date_a + '/' + date_b + '?NumRoom=1&NumAdult-Room1=1';
         url += gatherUrlKeyValues();
         return url;
     }
