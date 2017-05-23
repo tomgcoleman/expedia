@@ -414,6 +414,12 @@
         }
         ,
         {
+            "description": "git: page name in omniture is duplicated",
+            "regexMatch": "Value of dctk.omtr.eVar17 should be 'page.Hotel-Search'",
+            "bug": "https://jira.sea.corp.expecn.com/jira/browse/BHS-10253"
+        }
+        ,
+        {
             "description": "git: missing filters should not be checked",
             "regexMatch": "The 'data-track' attribute of rating filter . should be 'HOT:SR:StarRating:.Star'",
             "bug": "https://jira/jira/browse/BHS-9957"
