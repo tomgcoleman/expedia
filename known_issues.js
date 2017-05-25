@@ -545,5 +545,11 @@
             "regexMatch": "Value of dctk.omtr.eVar17 should be 'page.Hotel-Search', but it's page.Package.FH.Hotel-Search.Error",
             "bug": "https://jira.sea.corp.expecn.com/jira/browse/BHS-10152"
         }
+        ,
+        {
+            "description": "git: filter button selector has changed",
+            "regexMatch": "Filter button is visible",
+            "bug": "https://jira.sea.corp.expecn.com/jira/browse/BHS-10301"
+        }
     ]
 }
