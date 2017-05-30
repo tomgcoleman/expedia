@@ -551,5 +551,11 @@
             "regexMatch": "Filter button is visible",
             "bug": "https://jira.sea.corp.expecn.com/jira/browse/BHS-10301"
         }
+        ,
+        {
+            "description": "git: Expedia text appears on partner site",
+            "regexMatch": "HSR page should not show .Expedia. text",
+            "bug": "https://jira.sea.corp.expecn.com/jira/browse/BHS-10341"
+        }
     ]
 }
