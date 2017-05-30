@@ -557,5 +557,11 @@
             "regexMatch": "HSR page should not show .Expedia. text",
             "bug": "https://jira.sea.corp.expecn.com/jira/browse/BHS-10341"
         }
+        ,
+        {
+            "description": "git: no header on partner site",
+            "regexMatch": "Header should be visible",
+            "bug": "https://jira.sea.corp.expecn.com/jira/browse/BHS-10342"
+        }
     ]
 }
