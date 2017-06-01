@@ -563,5 +563,17 @@
             "regexMatch": "Header should be visible",
             "bug": "https://jira.sea.corp.expecn.com/jira/browse/BHS-10342"
         }
+        ,
+        {
+            "description": "git: filter feature has changed",
+            "regexMatch": "Filter (checkbox|label) \d+ is visible",
+            "bug": "https://jira.sea.corp.expecn.com/jira/browse/BHS-10384"
+        }
+        ,
+        {
+            "description": "git: show more link not showing",
+            "regexMatch": "Show more link is visible",
+            "bug": "https://jira.sea.corp.expecn.com/jira/browse/BHS-10385"
+        }
     ]
 }
