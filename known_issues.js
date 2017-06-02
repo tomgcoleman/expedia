@@ -566,7 +566,7 @@
         ,
         {
             "description": "git: filter feature has changed",
-            "regexMatch": "Filter (checkbox|label) \d+ is visible",
+            "regexMatch": "Filter (checkbox|label) \\d+ is visible",
             "bug": "https://jira.sea.corp.expecn.com/jira/browse/BHS-10384"
         }
         ,
