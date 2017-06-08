@@ -575,5 +575,11 @@
             "regexMatch": "Show more link is visible",
             "bug": "https://jira.sea.corp.expecn.com/jira/browse/BHS-10385"
         }
+        ,
+        {
+            "description": "git: POI list must be visible",
+            "regexMatch": "POI list must be visible",
+            "bug": "https://jira.sea.corp.expecn.com/jira/browse/BHS-10480"
+        }
     ]
 }
