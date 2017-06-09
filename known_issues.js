@@ -581,5 +581,12 @@
             "regexMatch": "POI list must be visible",
             "bug": "https://jira.sea.corp.expecn.com/jira/browse/BHS-10480"
         }
+        ,
+        {
+            "description": "git: Radio button in Neighborhood filter must be visible.",
+            "regexMatch": "Radio button in Neighborhood filter must be visible.",
+            "bug": "https://jira.sea.corp.expecn.com/jira/browse/BHS-10505"
+        }
+        
     ]
 }
