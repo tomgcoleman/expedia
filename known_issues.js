@@ -587,6 +587,11 @@
             "regexMatch": "Radio button in Neighborhood filter must be visible.",
             "bug": "https://jira.sea.corp.expecn.com/jira/browse/BHS-10505"
         }
-        
+        ,
+        {
+            "description": "git: new unit exception in test code.",
+            "regexMatch": "Test Hotel listings are visible. is terminated due to an exception.",
+            "bug": "https://jira.sea.corp.expecn.com/jira/browse/BHS-10520"
+        }        
     ]
 }
