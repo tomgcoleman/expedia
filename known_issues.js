@@ -593,5 +593,11 @@
             "regexMatch": "Test Hotel listings are visible. is terminated due to an exception.",
             "bug": "https://jira.sea.corp.expecn.com/jira/browse/BHS-10520"
         }        
+        ,
+        {
+            "description": "git: Page title map link should be hidden",
+            "regexMatch": "Page title map link should be hidden",
+            "bug": "https://jira.sea.corp.expecn.com/jira/browse/BHS-10777"
+        }        
     ]
 }
