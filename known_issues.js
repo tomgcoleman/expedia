@@ -343,7 +343,7 @@
         ,
         {
             "description": "git: Yellow highlighting does not appear on any price",
-            "regexMatch": "Yellow highlighting does not appear on any price",
+            "regexMatch": "Yellow highlighting (does|should) not appear on any price",
             "bug": "https://jira/jira/browse/BHS-9718"
         }
         ,
