@@ -531,7 +531,11 @@ function set_abov_cookie( new_value) {
 
 function set_cookie( c_name, new_value ){
 
-    new_value = new_value.replace(/::/g, ':');
+    new_value = new_value.replace(/::+/g, ':');
+    // remove : at start
+    new_value = new_value.replace(/^:/g, '');
+    // remove : at end
+    new_value = new_value.replace(/:$/g, '');
 
     var cookie_name = c_name || 'abov';
 
