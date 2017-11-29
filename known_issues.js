@@ -605,5 +605,11 @@
             "regexMatch": "For hotel '.*' : (Superlative|Review overall|review counts) must be visible",
             "bug": "https://jira.sea.corp.expecn.com/jira/browse/BHS-10819"
         }
+        ,
+        {
+            "description": "git: Guest count element changed to use class.",
+            "regexMatch": "The value of adults should match with expected value",
+            "bug": "https://jira.sea.corp.expecn.com/jira/browse/BHS-none"
+        }
     ]
 }
