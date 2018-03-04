@@ -308,7 +308,7 @@ function injectJson_setup_connection_with_extension() {
                     object_to_return = object_to_return[obj_name];
                 } else {
                     object_to_return = require(obj_name);
-                    if (!object_to_return) {
+                    if (typeof(object_to_return) == 'undefined') {
                         console.error('failed to require: ' + obj_name);
                     }
                 }
