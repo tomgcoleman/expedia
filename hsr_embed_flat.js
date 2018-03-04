@@ -244,25 +244,70 @@ function get_request() {
 
 // iterate through the object
 // cut off at given depth
-function pull_json_safe_stringify(result, obj, depth, msg) {
+var pull_json_safe_stringify = function(result, obj, depth, msg) {
     if (!msg) {
-        // debugger;
+        debugger;
         console.log('enter safe strigify');
     }
-    if (typeof(result) != 'object') return;
+    if (typeof(result) !== 'object') return;
     if (depth > 0) {
+        var need_call = false;
         for (var key in obj) {
-            result[key] = obj[key];
-            pull_json_safe_stringify(result[key], obj[key], depth-1, 'a');
+            if (key === 'price') {
+                var stop = 1;
+                // debugger;
+            }
+            if (key === 'offers') {
+                var stop = 1;
+                // debugger;
+            }
+            if (key === 'rooms') {
+                var stop = 1;
+                // debugger;
+            }
+            if (key === 'ownerDocument') continue;
+            if (key === 'context') continue;
+            if (obj[key] == null) {
+                result[key] = null;
+            } else if (obj[key].constructor === Array) {
+                result[key] = [];
+                need_call = true;
+            } else if (obj[key].constructor === Object) {
+                result[key] = {};
+                need_call = true;
+            } else if (typeof(obj[key]) === 'object') {
+                result[key] = {};
+                need_call = true;
+            } else if (typeof(obj[key]) === 'string') {
+                result[key] = obj[key];
+            } else if (typeof(obj[key]) === 'number') {
+                result[key] = obj[key];
+            } else if (typeof(obj[key]) === 'boolean') {
+                result[key] = obj[key];
+            } else if (typeof(obj[key]) === 'function') {
+                // do not copy functions
+            } else {
+                console.log('type of ' + key + ' = ' + typeof(obj[key]));
+                // result[key] = obj[key];
+            }
+            if (need_call) {
+                try {
+                    pull_json_safe_stringify(result[key], obj[key], depth - 1, 'a');
+                } catch(e) {
+                    // console.log('error with key: ' + key);
+                    // debugger;
+                    var stop = 1;
+                }
+            }
         }
         return;
     }
-    for (var key in result) {
-        if(typeof(result[key]) == 'object') {
-            result[key] = {};
+    for (var keyCut in result) {
+        if(typeof(result[keyCut]) === 'object') {
+            result[keyCut] = {};
         }
     }
-}
+};
 
 function injectJson_setup_connection_with_extension() {
     var hsr_embed_interval_id = setInterval(function () {
@@ -308,7 +353,7 @@ function injectJson_setup_connection_with_extension() {
                 delimiter = ',';
             }
             data_for_extension.choices = {};
-            pull_json_safe_stringify(data_for_extension.choices, choices, 10);
+            pull_json_safe_stringify(data_for_extension.choices, choices, 7);
             data_for_extension.original_request = original_request;
         } else if (requested_data_item.pull_json) {
             /* debugger; */
@@ -374,7 +419,7 @@ function injectJson_setup_connection_with_extension() {
                 }
             }
             data_for_extension.requested_json = {};
-            pull_json_safe_stringify(data_for_extension.requested_json, requested_json, 10);
+            pull_json_safe_stringify(data_for_extension.requested_json, requested_json, 7);
             data_for_extension.original_request = original_request;
         }
         if (chrome && chrome.runtime && chrome.runtime.sendMessage) {
