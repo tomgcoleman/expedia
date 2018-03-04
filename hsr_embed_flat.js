@@ -242,6 +242,28 @@ function get_request() {
 /* extension must have backend, to store callback even when ui not visible. */
 /* callback method stored only for short time, so we must resend over and over. */
 
+// iterate through the object
+// cut off at given depth
+function pull_json_safe_stringify(result, obj, depth, msg) {
+    if (!msg) {
+        // debugger;
+        console.log('enter safe strigify');
+    }
+    if (typeof(result) != 'object') return;
+    if (depth > 0) {
+        for (var key in obj) {
+            result[key] = obj[key];
+            pull_json_safe_stringify(result[key], obj[key], depth-1, 'a');
+        }
+        return;
+    }
+    for (var key in result) {
+        if(typeof(result[key]) == 'object') {
+            result[key] = {};
+        }
+    }
+}
+
 function injectJson_setup_connection_with_extension() {
     var hsr_embed_interval_id = setInterval(function () {
         var data_for_extension = {state: 'ready_to_inject'};
@@ -285,7 +307,8 @@ function injectJson_setup_connection_with_extension() {
                 choices += delimiter + children;
                 delimiter = ',';
             }
-            data_for_extension.choices = choices;
+            data_for_extension.choices = {};
+            pull_json_safe_stringify(data_for_extension.choices, choices, 10);
             data_for_extension.original_request = original_request;
         } else if (requested_data_item.pull_json) {
             /* debugger; */
@@ -350,7 +373,8 @@ function injectJson_setup_connection_with_extension() {
                     }
                 }
             }
-            data_for_extension.requested_json = requested_json;
+            data_for_extension.requested_json = {};
+            pull_json_safe_stringify(data_for_extension.requested_json, requested_json, 6);
             data_for_extension.original_request = original_request;
         }
         if (chrome && chrome.runtime && chrome.runtime.sendMessage) {
