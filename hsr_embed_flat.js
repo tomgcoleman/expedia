@@ -374,7 +374,7 @@ function injectJson_setup_connection_with_extension() {
                 }
             }
             data_for_extension.requested_json = {};
-            pull_json_safe_stringify(data_for_extension.requested_json, requested_json, 6);
+            pull_json_safe_stringify(data_for_extension.requested_json, requested_json, 10);
             data_for_extension.original_request = original_request;
         }
         if (chrome && chrome.runtime && chrome.runtime.sendMessage) {
