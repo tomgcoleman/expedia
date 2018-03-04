@@ -307,7 +307,10 @@ function injectJson_setup_connection_with_extension() {
                 if (object_to_return.hasOwnProperty(obj_name)) {
                     object_to_return = object_to_return[obj_name];
                 } else {
-                    console.error('failed to find ' + obj_name);
+                    object_to_return = require('obj_name');
+                    if (!object_to_return) {
+                        console.error('failed to require: ' + obj_name);
+                    }
                 }
             }
 
