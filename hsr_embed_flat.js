@@ -353,7 +353,11 @@ function injectJson_setup_connection_with_extension() {
                 delimiter = ',';
             }
             data_for_extension.choices = {};
-            pull_json_safe_stringify(data_for_extension.choices, choices, 7);
+            var max_depth_of_copy = 7;
+            if (requested_data_item.depth) {
+               max_depth_of_copy = requested_data_item.depth;
+            }
+            pull_json_safe_stringify(data_for_extension.choices, choices, max_depth_of_copy);
             data_for_extension.original_request = original_request;
         } else if (requested_data_item.pull_json) {
             /* debugger; */
